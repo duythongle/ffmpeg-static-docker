@@ -57,4 +57,4 @@ ENTRYPOINT  ["ffmpeg"]
 
 ENV LD_LIBRARY_PATH=/usr/local/lib64
 
-COPY --from=build /root/ffmpeg-static/bin/ffmpeg /usr/bin
+COPY --from=build /ffmpeg-static/bin/ffmpeg /usr/bin
