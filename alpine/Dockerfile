@@ -47,7 +47,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/zimbatm/ffmpeg-static.git && \
 cd ffmpeg-static && \
-./build.sh -j 8
+./build.sh -j 2
 
 FROM        alpine:latest
 MAINTAINER  Thomas Le <thongld2012@gmail.com>
