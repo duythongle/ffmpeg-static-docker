@@ -49,12 +49,10 @@ RUN git clone https://github.com/zimbatm/ffmpeg-static.git && \
 cd ffmpeg-static && \
 ./build.sh -j 2
 
-FROM        alpine:latest
+FROM        ubuntu:bionic
 MAINTAINER  Thomas Le <thongld2012@gmail.com>
 
 CMD         ["--help"]
 ENTRYPOINT  ["ffmpeg"]
-
-ENV LD_LIBRARY_PATH=/usr/local/lib64
 
 COPY --from=build /ffmpeg-static/bin/ffmpeg /usr/bin
